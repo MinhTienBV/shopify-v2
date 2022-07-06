@@ -318,5 +318,9 @@
   position: relative;
 }
 summary {
-  display: list-item;
+  list-style: none;
+  position: relative;
+}
+details>* {
+  box-sizing: border-box;
 }
