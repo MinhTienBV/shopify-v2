@@ -3,7 +3,7 @@
   //   @apply text-base text-black xl:text-lg;
   // }
   body {
-    font-family: --font-body-family;
+    font-family: var(--font-body-family);
     font-size: calc(var(--font-body-fontsize) * 1px);
   }
   html {
