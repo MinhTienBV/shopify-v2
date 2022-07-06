@@ -22,7 +22,7 @@
       {%- for block in section.blocks -%}
       {%- case block.type -%}
       {%- when 'headline' -%}
-      <div class="{{ section.settings.heading_align }}" {{ block.shopify_attributes }}>
+      <div class="{{ block.settings.heading_align }}" {{ block.shopify_attributes }}>
         <div class="product-item-wrap">
           <h2 class="{{ block.settings.heading_size }}">
             {{ block.settings.title }}
@@ -86,7 +86,7 @@
     {
       "type": "headline",
       "name": "Headline",
-      "limit": 3,
+      "limit": 1,
       "settings": [
         {
           "type": "text",
