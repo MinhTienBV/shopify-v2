@@ -1,1 +1,116 @@
-{"sections":{"rich_text":{"type":"rich-text","blocks":{"heading":{"type":"heading","settings":{"heading":"<p>Talk about your brand<\/p>","heading_size":"h1"}},"text":{"type":"text","settings":{"text":"<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"}}},"block_order":["heading","text"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":0}},"video":{"type":"video","settings":{"heading":"","heading_size":"h1","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","description":"","full_width":false,"color_scheme":"background-1","padding_top":36,"padding_bottom":36}}},"order":["rich_text","video"]}
+{
+  "sections": {
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "1657096116040e344d": {
+      "type": "protfolio",
+      "blocks": {
+        "1657096116ab4b5b4e-0": {
+          "type": "headline",
+          "settings": {
+            "title": "Wellness Retreats"
+          }
+        },
+        "1657096116ab4b5b4e-1": {
+          "type": "product-item",
+          "settings": {
+            "title": "Quest",
+            "image": "shopify:\/\/shop_images\/Ergomotion_QuestImage-2.jpg",
+            "text-link": "Explore",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "1657096116ab4b5b4e-0",
+        "1657096116ab4b5b4e-1"
+      ],
+      "settings": {
+        "heading": "Lorem",
+        "heading_size": "h2",
+        "heading_align": "text-center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1657096196e8705553": {
+      "type": "our-story",
+      "blocks": {
+        "1657096195512a3af8-0": {
+          "type": "heading",
+          "settings": {
+            "headingStore": "Our Heritage Story",
+            "heading_sizeStore": "h2"
+          }
+        },
+        "1657096195512a3af8-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Based in Santa Barbara, California, a world renown enclave of holistic wellness, with a burgeoning tech coast culture, ergomotion draws on its heritage by infusing smart tech into a curated collection of ergonomically designed, customized wellness solutions.<\/p>"
+          }
+        },
+        "b129025e-7a52-4367-a821-f7f4db5d40f7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With more than 7 million adjustable bases sold throughout 30+ countries, ergomotion has grown to become the world’s largest supplier of adjustable bases, offering the ultimate preventative self-care by balancing body, mind and spirit<\/p>"
+          }
+        },
+        "1657096195512a3af8-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1657096195512a3af8-0",
+        "1657096195512a3af8-1",
+        "b129025e-7a52-4367-a821-f7f4db5d40f7",
+        "1657096195512a3af8-2"
+      ],
+      "settings": {
+        "bgOurStory": "shopify:\/\/shop_images\/still_02.png",
+        "padding_top": 36,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "rich_text",
+    "1657096116040e344d",
+    "1657096196e8705553"
+  ]
+}
