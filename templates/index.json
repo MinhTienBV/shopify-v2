@@ -41,14 +41,6 @@
             "heading_align": "text-center"
           }
         },
-        "43fbad2d-f717-4686-b914-8ca38de9b0b3": {
-          "type": "headline",
-          "settings": {
-            "title": "Wellness Retreats",
-            "heading_size": "h2",
-            "heading_align": "text-left"
-          }
-        },
         "1657096116ab4b5b4e-1": {
           "type": "product-item",
           "settings": {
@@ -61,7 +53,6 @@
       },
       "block_order": [
         "1657096116ab4b5b4e-0",
-        "43fbad2d-f717-4686-b914-8ca38de9b0b3",
         "1657096116ab4b5b4e-1"
       ],
       "settings": {
