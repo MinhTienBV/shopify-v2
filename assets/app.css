@@ -368,84 +368,15 @@ video {
   height: auto;
 }
   body {
-  font-size: 1rem;
-  line-height: 1.44;
-  color: #000;
-}
-  @media (min-width: 1200px) {
-
-  body {
-    font-size: 1.125rem;
-    line-height: 1.75;
+    font-family: --font-body-family;
+    font-size: calc(var(--font-body-fontsize) * 1px);
   }
-}
   html {
   margin: 0;
 }
   html, 
 body {
   overflow-x: hidden;
-  --tw-bg-opacity: 1;
-  background-color: rgb(247 241 231 / var(--tw-bg-opacity));
-}
-  h1, 
-.h1 {
-  font-size: 1.875rem;
-  line-height: 1.13333;
-  font-weight: 700;
-}
-  @media (min-width: 768px) {
-
-  h1, 
-.h1 {
-    font-size: 3.125rem;
-    line-height: 1.04;
-  }
-}
-  h2, 
-.h2 {
-  font-size: 1.5rem;
-  line-height: 1.3333;
-  font-weight: 700;
-}
-  @media (min-width: 768px) {
-
-  h2, 
-.h2 {
-    font-size: 1.875rem;
-    line-height: 1.08333;
-  }
-}
-  h3, 
-.h3 {
-  font-size: 1.25rem;
-  line-height: 1.13333;
-  font-weight: 700;
-}
-  @media (min-width: 768px) {
-
-  h3, 
-.h3 {
-    font-size: 1.625rem;
-    line-height: 1.38462;
-  }
-}
-  h4, 
-.h4 {
-  font-size: 1.375rem;
-  line-height: 1.3;
-}
-  h5, 
-.h5 {
-  font-size: 1.375rem;
-  line-height: 1.45455;
-  font-weight: 700;
-}
-  h6, 
-.h6 {
-  font-size: 1.375rem;
-  line-height: 1.45455;
-  font-weight: 500;
 }
   small {
   font-size: 0.875rem;

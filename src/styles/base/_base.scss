@@ -1,43 +1,47 @@
 @layer base {
+  // body {
+  //   @apply text-base text-black xl:text-lg;
+  // }
   body {
-    @apply text-base text-black xl:text-lg;
+    font-family: --font-body-family;
+    font-size: calc(var(--font-body-fontsize) * 1px);
   }
   html {
     @apply m-0;
   }
   html,
   body{
-    @apply overflow-x-hidden bg-gray-200;
+    @apply overflow-x-hidden;
   }
-  h1,
-  .h1 {
-    @apply text-h1 font-bold md:text-h1-md;
-  }
+  // h1,
+  // .h1 {
+  //   @apply text-h1 font-bold md:text-h1-md;
+  // }
 
-  h2,
-  .h2 {
-    @apply text-h2 font-bold md:text-h2-md;
-  }
+  // h2,
+  // .h2 {
+  //   @apply text-h2 font-bold md:text-h2-md;
+  // }
 
-  h3,
-  .h3 {
-    @apply text-h3 font-bold md:text-h3-md;
-  }
+  // h3,
+  // .h3 {
+  //   @apply text-h3 font-bold md:text-h3-md;
+  // }
 
-  h4,
-  .h4 {
-    @apply text-h4;
-  }
+  // h4,
+  // .h4 {
+  //   @apply text-h4;
+  // }
 
-  h5,
-  .h5 {
-    @apply text-h5 font-bold;
-  }
+  // h5,
+  // .h5 {
+  //   @apply text-h5 font-bold;
+  // }
 
-  h6,
-  .h6 {
-    @apply text-h5 font-medium;
-  }
+  // h6,
+  // .h6 {
+  //   @apply text-h5 font-medium;
+  // }
   small {
     @apply text-sm;
   }
