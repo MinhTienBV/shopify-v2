@@ -1,0 +1,135 @@
+<header role="banner" class="site-header">
+  <div class="header-bottom">
+    <div class="header-inn">
+
+      <div class="header-logo">
+        <a href="{{ routes.root_url }}">
+         {%- if section.settings.logo != blank -%}
+        {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+         {{ section.settings.logo | image_url: width: 180 | image_tag:
+              class: 'header__heading-logo',
+              widths: '50, 100, 150, 200, 250, 300, 400, 500',
+              width: 118,
+              alt: logo_alt
+            }}
+          {%- endif -%}
+        </a>
+      </div>
+      <nav role="navigation" class="head-aside">
+        <ul id="primary-menu" class="head-menu">
+        {%- for link in section.settings.menu.links -%}
+          <li
+            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children {% if link.current %} current-menu-ancestor {% endif %} {% if link.child_active %} current-menu-ancestor {% endif %}">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            {%- if link.links != blank -%}
+            <ul class="sub-menu">
+            {%- for childlink in link.links -%}
+            <li
+                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children {% if childlink.current %} current-menu-item{% endif %} {% if childlink.child_active %} current-menu-ancestor {% endif %}">
+                <a href="{{ childlink.url }}">{{ childlink.title }}
+                </a>
+                {%- if childlink.links != blank -%}
+                <ul class="sub-menu">
+                  {%- for childlinkLV2 in childlink.links -%}
+                  <li
+                    class="menu-item menu-item-type-post_type menu-item-object-product {% if childlinkLV2.current %} current-menu-item{% endif %}"><a
+                      href="{{ childlinkLV2.url }}">{{ childlinkLV2.title }}</a>
+                  </li>
+                  {%- endfor -%}
+                </ul>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+            </ul>
+             {%- endif -%}
+          </li>
+          {%- endfor -%}
+        </ul>
+        <div class="cart-box">
+          <a class="a_active" href="{{ routes.cart_url }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21">
+              <defs>
+                <style>
+                  .a {
+                    fill: none;
+                    stroke: #373736;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                  }
+                </style>
+              </defs>
+              <g transform="translate(0.5 0.5)">
+                <path class="a" d="M6,2,3,6V20a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V6L18,2Z" transform="translate(-3 -2)">
+                </path>
+                <line class="a" x2="18" transform="translate(0 4)"></line>
+                <path class="a" d="M16,10a4,4,0,0,1-8,0" transform="translate(-3 -2)"></path>
+              </g>
+            </svg>
+          </a>
+          <span class="count-in-cart">0</span>
+
+          <div class="widget_shopping_cart_content">
+
+            <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
+
+
+          </div>
+
+        </div>
+
+        <div class="menu-ico"></div>
+
+      </nav>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "New Header",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:sections.header.settings.logo.label"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "select",
+      "id": "menu_type_desktop",
+      "options": [
+        {
+          "value": "dropdown",
+          "label": "t:sections.header.settings.menu_type_desktop.options__1.label"
+        },
+        {
+          "value": "mega",
+          "label": "t:sections.header.settings.menu_type_desktop.options__2.label"
+        }
+      ],
+      "default": "dropdown",
+      "label": "t:sections.header.settings.menu_type_desktop.label",
+      "info": "t:sections.header.settings.menu_type_desktop.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_line_separator",
+      "default": true,
+      "label": "t:sections.header.settings.show_line_separator.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_header",
+      "default": true,
+      "label": "t:sections.header.settings.enable_sticky_header.label",
+      "info": "t:sections.header.settings.enable_sticky_header.info"
+    }
+  ]
+}
+{% endschema %}

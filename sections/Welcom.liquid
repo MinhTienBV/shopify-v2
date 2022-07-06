@@ -1,0 +1,73 @@
+<!-- Welcome section starts -->
+{% if section.settings.image_right %}
+    {% assign classname = "images-right" %}
+{% else %}
+    {% assign classname = "images-left" %}
+{% endif %}
+<section
+  class="module mod-list-system single-system bg-type-line">
+  <div class="system-item {{classname}}">
+    <div class="system-item-container anima-bottom">
+      <div class="system-content text-white">
+        <div class="d-table w-100">
+          <div class="d-table-cell p01 last-mb-none ">
+            {% if section.settings.imageModule != blank %}
+              <div class="system-icon">
+              <img src="{{section.blocks.imageModule.src}}" alt="text">
+            </div>
+            {% endif %}
+            
+            {% if section.settings.headline != blank %}
+              <h2>
+               {{secion.settings.headline }}
+              </h2>
+            {% endif %}
+            {% if section.settings.content != blank %}
+              {{secion.settings.content }}
+            {% endif %}
+      
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Welcome section ends -->
+{% schema %}
+{
+"name": "Welcome", // Section name
+"settings": [
+  {
+    "id": "headline",
+    "type": "textarea",
+    "label": "Heading"
+  },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+  },
+  {
+    "id": "imageModule",
+    "type": "image_picker",
+    "label": "Image"
+  },
+  {
+    "id": "image_right",
+    "type": "checkbox",
+    "label": "Image Right",
+    "default": false
+  }
+],
+"presets": [
+  {
+  "name": "Welcome Section",
+  "category": "ADVANCED LAYOUT"
+  }
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}
