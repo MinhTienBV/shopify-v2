@@ -330,3 +330,7 @@ summary .icon-caret {
   right: 1.5rem;
   top: calc(50% - 0.2rem);
 }
+.text-area, .select {
+  display: flex;
+  position: relative;
+}
