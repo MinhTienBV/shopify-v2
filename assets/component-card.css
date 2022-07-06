@@ -314,3 +314,9 @@
 .facets-wrapper {
   padding: 0 5rem;
 }
+.disclosure-has-popup {
+  position: relative;
+}
+summary {
+  display: list-item;
+}
