@@ -311,3 +311,40 @@
 .card-article-info {
   margin-top: 1rem;
 }
+.facets-wrapper {
+  padding: 0 5rem;
+}
+.disclosure-has-popup {
+  position: relative;
+}
+summary {
+  list-style: none;
+  position: relative;
+}
+details>* {
+  box-sizing: border-box;
+}
+summary .icon-caret {
+  position: absolute;
+  height: 0.6rem;
+  right: 1.5rem;
+  top: calc(50% - 0.2rem);
+}
+.text-area, .select {
+  display: flex;
+  position: relative;
+}
+.no-js:not(html) {
+  display: none!important;
+}
+@media screen and (min-width: 990px) {
+  .large-up-hide {
+    display: none!important;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .facets .disclosure-has-popup[open]>summary+* {
+    z-index: 2;
+}
+}
