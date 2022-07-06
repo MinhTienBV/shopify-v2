@@ -334,3 +334,8 @@ summary .icon-caret {
   display: flex;
   position: relative;
 }
+@media screen and (min-width: 990px) {
+  .large-up-hide {
+    display: none!important;
+  }
+}
