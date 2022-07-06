@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'base/animationPage';
+@import 'base/base';
+@import 'base/button';
+@import 'base/custom';
+@import 'base/form';
+@import 'base/loading';
+@import 'core/lib/font-iconmoon';
+@import 'core/lib/form-animation';
+@import 'core/lib/select-c8';
+// @import "~slick-carousel/slick/slick.scss";
+// @import 'core/lib/slick-theme';
+@import 'core/lib/popup';
+@import 'modules/global/footer';
+@import 'modules/global/header';
+// @import 'modules/global/*.scss';
+@import 'modules/product';
+@import 'modules/portfolio';

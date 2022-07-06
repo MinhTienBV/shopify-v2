@@ -1,0 +1,69 @@
+.dropdown-toggle {
+
+  color: inherit;
+  font-size: inherit;
+  .caret-c8 {
+    font-size: 20px;
+    font-weight: initial;
+    transform: rotate(0deg);
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &:hover,
+  &[aria-expanded="true"] {
+    color: inherit;
+  }
+
+}
+.parent-c8 {
+  select {
+    display: none !important;
+  }
+}
+.dropdown-select-c8 {
+  &.show {
+    z-index: 20;
+    .caret-c8 {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.focus {
+    li {
+      a:focus {
+        color: inherit;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    float: none;
+    color: inherit;
+    font-size: 1em;
+  }
+
+  li {
+ 
+    &:hover,
+    &.selected:not(.disabled), &:focus{
+      @apply bg-primary-100 text-white;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: .8;
+
+      a {
+        cursor: not-allowed;
+      }
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+}
