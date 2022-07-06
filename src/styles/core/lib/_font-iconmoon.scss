@@ -1,15 +1,15 @@
 // stylelint-disable
-// @font-face {
-//   font-family: 'icomoon';
-//   font-display: swap;
-//   src:  url('icomoon.eot?vm3twl');
-//   src:  url('icomoon.eot?vm3twl#iefix') format('embedded-opentype'),
-//     url('icomoon.ttf?vm3twl') format('truetype'),
-//     url('icomoon.woff?vm3twl') format('woff'),
-//     url('icomoon.svg?vm3twl#icomoon') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'icomoon';
+  font-display: swap;
+  src:  url('/assets/icomoon.eot?vm3twl');
+  src:  url('/assets/icomoon.eot?vm3twl#iefix') format('embedded-opentype'),
+    url('/assets/icomoon.ttf?vm3twl') format('truetype'),
+    url('/assets/icomoon.woff?vm3twl') format('woff'),
+    url('/assets/icomoon.svg?vm3twl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .icomoon {
   /* use to prevent issues with browser extensions that change fonts */

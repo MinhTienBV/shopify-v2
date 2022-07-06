@@ -808,16 +808,6 @@ body.has-animation .set-animation .anima-opacity {
     transition-delay: 1s;
   }
 }
-a {
-  color: #b94a02;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-}
-a:hover {
-  color: #A33100;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-}
 .text-inherit-child h1,
 .text-inherit-child h2,
 .text-inherit-child h3,
@@ -886,6 +876,14 @@ a:hover {
   to {
     transform: rotate(360deg);
   }
+}
+@font-face {
+  font-family: "icomoon";
+  font-display: swap;
+  src: url("/assets/icomoon.eot?vm3twl");
+  src: url("/assets/icomoon.eot?vm3twl#iefix") format("embedded-opentype"), url("/assets/icomoon.ttf?vm3twl") format("truetype"), url("/assets/icomoon.woff?vm3twl") format("woff"), url("/assets/icomoon.svg?vm3twl#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 .icomoon {
   /* use to prevent issues with browser extensions that change fonts */
