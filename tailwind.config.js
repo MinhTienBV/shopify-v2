@@ -1,4 +1,4 @@
-const configs = require('./config')
+const configs = require('./src/styles/config')
 module.exports = {
   content: ['./*/*.json','./*/*.liquid'],
   mode: 'aot',
