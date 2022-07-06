@@ -846,6 +846,12 @@ a:hover {
   margin-bottom: 0;
 }
 
+@media (min-width: 1200px) {
+  .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
 .form-control {
   display: block;
   width: 100%;

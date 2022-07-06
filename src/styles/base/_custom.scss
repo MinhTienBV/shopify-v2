@@ -54,3 +54,9 @@
   }
 }
 
+@screen xl {
+  .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
