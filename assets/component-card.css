@@ -339,3 +339,9 @@ summary .icon-caret {
     display: none!important;
   }
 }
+
+@media screen and (min-width: 750px) {
+  .facets .disclosure-has-popup[open]>summary+* {
+    z-index: 2;
+}
+}
