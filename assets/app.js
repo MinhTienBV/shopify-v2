@@ -26,7 +26,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 console.log('App Desktop');
-
+console.log('Welcome');
 /***/ }),
 
 /***/ "./src/scripts/modules/AnimationScrollPage.js":
