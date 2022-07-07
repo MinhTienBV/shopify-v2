@@ -56,6 +56,9 @@
 .visually-hidden {
   @apply hidden;
 }
+main {
+  padding-top: 124px;
+}
 @screen xl {
   .col-lg-6 {
     flex: 0 0 50%;

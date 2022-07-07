@@ -378,6 +378,18 @@ video {
 body {
   overflow-x: hidden;
 }
+  h1,
+.h1 {
+    font-size: calc(var(--font-headline_fontsize) * 1px);
+  }
+  h2,
+.h2 {
+    font-size: calc(var(--font-headline_fontsize2) * 1px);
+  }
+  h3,
+.h3 {
+    font-size: calc(var(--font-headline_fontsize3) * 1px);
+  }
   small {
   font-size: 0.875rem;
   line-height: 1.25;
@@ -834,6 +846,14 @@ body.has-animation .set-animation .anima-opacity {
 
 .last-mb-none *:last-child {
   margin-bottom: 0;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+main {
+  padding-top: 124px;
 }
 
 @media (min-width: 1200px) {
