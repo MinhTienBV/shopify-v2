@@ -13,20 +13,20 @@
   body{
     @apply overflow-x-hidden;
   }
-  // h1,
-  // .h1 {
-  //   @apply text-h1 font-bold md:text-h1-md;
-  // }
+  h1,
+  .h1 {
+    font-size: calc(var(--font-headline_fontsize) * 1px);
+  }
 
-  // h2,
-  // .h2 {
-  //   @apply text-h2 font-bold md:text-h2-md;
-  // }
+  h2,
+  .h2 {
+    font-size: calc(var(--font-headline_fontsize2) * 1px);
+  }
 
-  // h3,
-  // .h3 {
-  //   @apply text-h3 font-bold md:text-h3-md;
-  // }
+  h3,
+  .h3 {
+    font-size: calc(var(--font-headline_fontsize3) * 1px);
+  }
 
   // h4,
   // .h4 {
