@@ -3175,7 +3175,6 @@ body:not(.home).theme-ergomotion .site-header .header-inn .header-logo svg .b {
 .our-story-section .info-box {
   width: calc(100% - 370px);
   max-width: 474px;
-  background-color: red;
 }
 
 .our-story-section .section-wrap {

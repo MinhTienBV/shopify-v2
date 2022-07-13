@@ -1,7 +1,10 @@
 const configs = require('./src/styles/config')
 module.exports = {
   content: ['./*/*.json','./*/*.liquid'],
-  mode: 'aot',
+  content: require('fast-glob').sync([
+    './*/*.json','./*/*.liquid'
+  ]),
+  mode: 'jit',
   theme: {
     fontFamily: {
       montserrat: ['Montserrat', 'sans-serif'],
