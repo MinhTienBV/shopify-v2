@@ -4,7 +4,7 @@
 // import 'jquery-lazy/jquery.lazy'
 
 // import modules
-// import './modules/FixHeight';
+import './modules/FixHeight';
 import './modules/UserAgent';
 import './modules/AnimationScrollPage'
 import './modules/Header';

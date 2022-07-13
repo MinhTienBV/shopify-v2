@@ -9,21 +9,22 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_UserAgent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/UserAgent */ "./src/scripts/modules/UserAgent.js");
-/* harmony import */ var _modules_AnimationScrollPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/AnimationScrollPage */ "./src/scripts/modules/AnimationScrollPage.js");
-/* harmony import */ var _modules_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Header */ "./src/scripts/modules/Header.js");
-/* harmony import */ var _modules_Menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/Menu */ "./src/scripts/modules/Menu.js");
-/* harmony import */ var _modules_Popup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/Popup */ "./src/scripts/modules/Popup.js");
-/* harmony import */ var _modules_SelectC8__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/SelectC8 */ "./src/scripts/modules/SelectC8.js");
-/* harmony import */ var _modules_SliderDemo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/SliderDemo */ "./src/scripts/modules/SliderDemo.js");
-/* harmony import */ var _modules_LazyLoadImage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/LazyLoadImage */ "./src/scripts/modules/LazyLoadImage.js");
-/* harmony import */ var _modules_FormAnimation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/FormAnimation */ "./src/scripts/modules/FormAnimation.js");
+/* harmony import */ var _modules_FixHeight__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/FixHeight */ "./src/scripts/modules/FixHeight.js");
+/* harmony import */ var _modules_UserAgent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/UserAgent */ "./src/scripts/modules/UserAgent.js");
+/* harmony import */ var _modules_AnimationScrollPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/AnimationScrollPage */ "./src/scripts/modules/AnimationScrollPage.js");
+/* harmony import */ var _modules_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/Header */ "./src/scripts/modules/Header.js");
+/* harmony import */ var _modules_Menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/Menu */ "./src/scripts/modules/Menu.js");
+/* harmony import */ var _modules_Popup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/Popup */ "./src/scripts/modules/Popup.js");
+/* harmony import */ var _modules_SelectC8__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/SelectC8 */ "./src/scripts/modules/SelectC8.js");
+/* harmony import */ var _modules_SliderDemo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/SliderDemo */ "./src/scripts/modules/SliderDemo.js");
+/* harmony import */ var _modules_LazyLoadImage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/LazyLoadImage */ "./src/scripts/modules/LazyLoadImage.js");
+/* harmony import */ var _modules_FormAnimation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/FormAnimation */ "./src/scripts/modules/FormAnimation.js");
 // import external dependencies
 // import $ from 'jquery';
 // import 'slick-carousel/slick/slick'
 // import 'jquery-lazy/jquery.lazy'
 // import modules
-// import './modules/FixHeight';
+
 
 
 
@@ -155,6 +156,79 @@ var CallBackLazy = /*#__PURE__*/function () {
 }();
 
 
+
+/***/ }),
+
+/***/ "./src/scripts/modules/ConvertHeight.js":
+/*!**********************************************!*\
+  !*** ./src/scripts/modules/ConvertHeight.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var ConvertHeight = function ($) {
+  $.fn.convertHeight = function () {
+    var element = $(this);
+    $(element).height('auto');
+    var h1 = 0;
+    var itemss = $(element);
+    itemss.each(function () {
+      if (h1 < $(this).height()) {
+        h1 = $(this).height();
+      }
+    });
+    itemss.each(function () {
+      $(this).height(h1);
+    });
+  };
+}($);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConvertHeight);
+
+/***/ }),
+
+/***/ "./src/scripts/modules/FixHeight.js":
+/*!******************************************!*\
+  !*** ./src/scripts/modules/FixHeight.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ConvertHeight__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ConvertHeight */ "./src/scripts/modules/ConvertHeight.js");
+ // import 'jquery-match-height'
+
+var FixHeight = function () {
+  var _this = $('.mod-equaheight');
+
+  var _items = $('.equaheight-item'); // let _itemsV2 = $('.equaheight-item-v2')
+
+
+  if (_this.length) {
+    var EquaHeight = function EquaHeight() {
+      _this.each(function (index, el) {
+        $(el).find(_items).convertHeight(); // $(el).find(_itemsV2).matchHeight({
+        //   byRow: true,
+        //   property: 'height',
+        //   target: null,
+        //   remove: false
+        // })
+      });
+    };
+
+    EquaHeight();
+    $(window).resize(function () {
+      EquaHeight();
+    });
+  }
+}();
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FixHeight);
 
 /***/ }),
 
