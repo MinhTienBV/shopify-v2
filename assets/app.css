@@ -820,6 +820,10 @@ body.has-animation .set-animation .anima-opacity {
     transition-delay: 1s;
   }
 }
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(87 101 65 / var(--tw-bg-opacity));
+}
 .text-inherit-child h1,
 .text-inherit-child h2,
 .text-inherit-child h3,
