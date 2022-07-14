@@ -59,6 +59,9 @@
 main {
   padding-top: 124px;
 }
+.product__media.global-media-settings {
+  padding-top: 0 !important;
+}
 @screen xl {
   .col-lg-6 {
     flex: 0 0 50%;
