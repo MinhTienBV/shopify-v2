@@ -49,11 +49,31 @@
             "text-link": "Explore",
             "link": "#"
           }
+        },
+        "4e54edef-908b-442e-b3a0-79288e73c98c": {
+          "type": "product-item",
+          "settings": {
+            "title": "Wellness Retreats",
+            "image": "shopify:\/\/shop_images\/still_02.png",
+            "text-link": "",
+            "link": ""
+          }
+        },
+        "05a453ba-9a59-4332-8101-5d78ed7db635": {
+          "type": "product-item",
+          "settings": {
+            "title": "Wellness Retreats2",
+            "image": "shopify:\/\/shop_images\/self-serve-coffee-shop.jpg",
+            "text-link": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "1657096116ab4b5b4e-0",
-        "1657096116ab4b5b4e-1"
+        "1657096116ab4b5b4e-1",
+        "4e54edef-908b-442e-b3a0-79288e73c98c",
+        "05a453ba-9a59-4332-8101-5d78ed7db635"
       ],
       "settings": {
         "padding_top": 36,
