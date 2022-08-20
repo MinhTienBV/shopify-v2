@@ -5,6 +5,7 @@
   body {
     font-family: var(--font-body-family);
     font-size: calc(var(--font-body-fontsize) * 1px);
+    @apply bg-transparent;
   }
   html {
     @apply m-0;
@@ -88,6 +89,3 @@
 // a {
 //   @apply text-primary-100 underline hover:no-underline hover:text-primary-200;
 // }
-body {
-  @apply bg-green-100;
-}

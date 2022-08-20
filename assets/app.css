@@ -370,6 +370,7 @@ video {
   body {
     font-family: var(--font-body-family);
     font-size: calc(var(--font-body-fontsize) * 1px);
+    background-color: transparent;
   }
   html {
   margin: 0;
@@ -819,10 +820,6 @@ body.has-animation .set-animation .anima-opacity {
   body.has-animation .set-animation.delay-10 {
     transition-delay: 1s;
   }
-}
-body {
-  --tw-bg-opacity: 1;
-  background-color: rgb(87 101 65 / var(--tw-bg-opacity));
 }
 .text-inherit-child h1,
 .text-inherit-child h2,
