@@ -10,6 +10,9 @@
   html {
     @apply m-0;
   }
+  main {
+    @apply pt-50;
+  }
   html,
   body{
     @apply overflow-x-hidden;
@@ -29,20 +32,20 @@
     font-size: calc(var(--font-headline_fontsize3) * 1px);
   }
 
-  // h4,
-  // .h4 {
-  //   @apply text-h4;
-  // }
+  h4,
+  .h4 {
+    @apply text-h4;
+  }
 
-  // h5,
-  // .h5 {
-  //   @apply text-h5 font-bold;
-  // }
+  h5,
+  .h5 {
+    @apply text-h5 font-bold;
+  }
 
-  // h6,
-  // .h6 {
-  //   @apply text-h5 font-medium;
-  // }
+  h6,
+  .h6 {
+    @apply text-h5 font-medium;
+  }
   small {
     @apply text-sm;
   }

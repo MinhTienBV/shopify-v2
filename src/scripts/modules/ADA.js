@@ -40,7 +40,7 @@ export default class ADA {
         $('.focus-status').removeClass('focus-status')
       }
       if (!$(e.target).parents('.dropdown-select-c8').length) {
-        $('.dropdown-select-c8').each((_i, ele) => {
+        $('.dropdown-select-c8').each((i, ele) => {
           $(ele).removeClass('show focus').find('.dropdown-menu').removeClass('show')
         })
       }
@@ -56,7 +56,6 @@ export default class ADA {
     $header.attr('tabindex', '0').focus().removeAttr('tabindex')
   }
   initADA () {
-    $('h1').attr('tabindex', '0')
     $('.popup-is-open').removeAttr('tabindex')
     $('.tiny-prev,.tiny-next').keydown((e) => {
       if (e.keyCode === 13) {

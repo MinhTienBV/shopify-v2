@@ -1,18 +1,24 @@
-// import external dependencies
-// import $ from 'jquery';
-// import 'slick-carousel/slick/slick'
-// import 'jquery-lazy/jquery.lazy'
+import 'slick-carousel/slick/slick'
+// // js Custom
+import './modules/FixHeight'
+import './modules/Popup'
+import './modules/SelectC8'
 
-// import modules
-import './modules/FixHeight';
-import './modules/UserAgent';
+// import './modules/CallModule'
+
+import './modules/BrowserDetection'
+import './modules/CheckDevice'
+import './modules/ConvertSvg'
+import './modules/LazyLoadImage'
+
+import './modules/FormAnimation'
+import './modules/ADA'
+
+import './modules/UserAgent'
+// import './modules/SliderDemo'
+import './modules/Header'
+import './modules/Menu'
 import './modules/AnimationScrollPage'
-import './modules/Header';
-import './modules/Menu';
-import './modules/Popup';
-import './modules/SelectC8';
-import './modules/SliderDemo';
-import './modules/LazyLoadImage';
-import './modules/FormAnimation';
+import './modules/ConvertSvg'
 
-console.log('App Desktop 2')
+console.log('App')

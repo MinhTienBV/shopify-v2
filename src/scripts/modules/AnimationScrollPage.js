@@ -6,6 +6,7 @@ export default class AnimationScrollPage {
     this.offset = window.innerHeight
     this.wintop = null
     this.topcoords = null
+    this.addClassAni = 'set-animation'
   }
   init () {
     this.animationEle()
@@ -17,14 +18,14 @@ export default class AnimationScrollPage {
     this.offset = this.winH
     if ($('body').hasClass('has-animation')) {
       this.wintop = $(window).scrollTop()
-      this.$elems.each((_index, ele) => {
+      this.$elems.each((index, ele) => {
         const $elm = $(ele)
-        if ($elm.hasClass('set-animation')) {
+        if ($elm.hasClass(this.addClassAni)) {
           return true
         }
         this.topcoords = $elm.offset().top
         if (this.wintop > (this.topcoords - this.offset)) {
-          $elm.addClass('set-animation')
+          $elm.addClass(this.addClassAni)
         }
         return true
       })

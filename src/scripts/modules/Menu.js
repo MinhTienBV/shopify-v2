@@ -1,7 +1,8 @@
 
  export default class Menu {
    constructor () {
-     this.$this = $('#main-menu')
+     this.this = '#main-menu'
+     this.$this = $(this.this)
      this.elementItem = '.hamburger-menu, html, #main-menu, #header'
      this.$header = $('#header, #main-menu-mobile')
      this.li = this.$this.find('.main-menu-ul >li>a')

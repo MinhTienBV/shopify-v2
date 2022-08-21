@@ -30,7 +30,7 @@
       assign ratio = 1
     endif
   -%}
-  {% comment %} <div class="card-wrapper underline-links-hover">
+<div class="card-wrapper underline-links-hover">
     <div class="card
       card--{{ settings.card_style }}
       {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
@@ -212,18 +212,8 @@
         </div>
       </div>
     </div>
-  </div> {% endcomment %}
-  <div class="em-block">
-    <div class="em-block__content">
-      <div class="em-block__subtitle">{{ card_product.title }} </div>
-      {{ card_product.description }}
-      <a href="{{ card_product.url }}"
-        class="btn em-button btn-product-learnmore button--secondary">LEARN MORE</a>
-
-    </div>
-
-    <div class="em-block__image lazy" data-src="{{ card_product.featured_media | image_url }}">
   </div> 
+
 
 </div>
 {%- else -%}

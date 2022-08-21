@@ -1,4 +1,4 @@
-export default class ConvertSvg {
+export class ConvertSvg {
   constructor () {
     this.$hasSvg = $('img.img-svg:not(.lazy)')
   }
@@ -22,10 +22,10 @@ export default class ConvertSvg {
   }
   convertSvg () {
     if (this.$hasSvg.length) {
-      this.$hasSvg.each((_index, e) => {
+      this.$hasSvg.each((index, e) => {
         const $img = $(e)
         const imgURL = $img.attr('src')
-        if (imgURL !== null) {
+        if (imgURL) {
           $.get(imgURL, (data) => {
             this.appendsvg(data, $img)
           }, 'xml')
@@ -35,4 +35,6 @@ export default class ConvertSvg {
   }
 }
 
-new ConvertSvg().convertSvg()
+export default (() => {
+  new ConvertSvg().convertSvg()
+})()

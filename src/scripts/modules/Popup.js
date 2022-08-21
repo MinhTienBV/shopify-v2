@@ -11,6 +11,7 @@ export default class Popup {
     this.$modPop = '.mod-popup'
     this.$ClosePopup = '.popup-is-close'
     this.$openPopup = '.popup-is-open'
+    this.isClick = 'is-click'
     this.closeContent = '<span class="icomoon icon-close"></span><span class="sr-only">Close Popup</span>'
     this.closeLink = `<a href="javascript:;" class="popup-is-close no-underline">
     <span class="icomoon icon-close"></span>
@@ -22,15 +23,20 @@ export default class Popup {
     this.widthContent = 'container'
     this.widthContentTmp = 'container'
     this.popupstatic = 'popup-static'
-    this.popcontent = '.popup-content'
+    this.popupContainer = 'popup-container'
+    this.popcontent = 'popup-content'
+    this.$popcontent = `.${this.popcontent}`
     this.popShow = 'popup-show'
-    this.popinner = '.popup-inner'
+    this.$popinner = '.popup-inner'
     this.noelement = 'no-element'
+    this.maskOverlay = 'mask-pop-overlay'
+    this.modPopupStatic = 'mod-popup-static'
+    this.popupOpen = 'popup-open'
     this.iframe = ''
   }
   init () {
     if (this.$html.length) {
-      this.openPopupGallery()
+      this.openPopup()
       this.clickOutSite()
       this.clickClosePopup()
     }
@@ -41,9 +47,9 @@ export default class Popup {
    */
   renderPopup () {
     const html = `<div class="mod-popup ${this.popShow}">
-    <div class="popup-container inset-0 absolute">
-    <div class="popup-content ${this.widthContent}">
-    <div class="mask-pop-overlay"></div>
+    <div class="${this.popupContainer} inset-0 absolute">
+    <div class="${this.popcontent} ${this.widthContent}">
+    <div class="${this.maskOverlay}"></div>
     </div>
     </div>
     </div>`
@@ -52,7 +58,7 @@ export default class Popup {
   loadLazyOnLoad () {
     const $hasLazy = $('.popup-inner .lazy')
     if ($hasLazy.length) {
-      $hasLazy.each((_index, el) => {
+      $hasLazy.each((index, el) => {
         const element = el
         const elementTmp = $(element)[0].tagName
         callBack.call(elementTmp, element)
@@ -64,7 +70,7 @@ export default class Popup {
     if (url.toLowerCase().indexOf('youtube.com') !== -1 && url.toLowerCase().indexOf('youtube.com/embed') === -1) {
       const tempV = url.split('?v=')[1]
       const v = tempV.split('&')[0]
-      return `${urlYoutube}${v}?autoplay=1&rel=0&showinfo=0`
+      return urlYoutube + v + '?autoplay=1&rel=0&showinfo=0'
     }
     if (url.toLowerCase().indexOf('vimeo.com') !== -1 && url.toLowerCase().indexOf('player.vimeo.com/video') === -1) {
       const parts = url.split('/')
@@ -74,7 +80,7 @@ export default class Popup {
     if (url.toLowerCase().indexOf('youtu.be') !== -1) {
       const parts2 = url.split('/')
       const v3 = parts2.pop()
-      return `${urlYoutube}${v3}?autoplay=1&rel=0&showinfo=0`
+      return urlYoutube + v3 + '?autoplay=1&rel=0&showinfo=0'
     }
 
     return url
@@ -99,23 +105,23 @@ export default class Popup {
               </div>
             </div>`
     this.renderPopup()
-    const $popupContent = $(this.$modPop).find(this.popcontent)
+    const $popupContent = $(this.$modPop).find(this.$popcontent)
     $popupContent.append(this.iframe)
-    $popupContent.find(this.popinner).append(this.closeLink)
+    $popupContent.find(this.$popinner).append(this.closeLink)
   }
   popupContent (tmpContent) {
     let cloneTmp = ''
-    cloneTmp = $(tmpContent).find(this.popinner).clone()
+    cloneTmp = $(tmpContent).find(this.$popinner).clone()
     this.renderPopup()
-    const $popupContent = $(this.$modPop).find(this.popcontent)
+    const $popupContent = $(this.$modPop).find(this.$popcontent)
     if ($(tmpContent).length) {
       $popupContent.append(cloneTmp)
     } else {
       $popupContent.addClass(this.noelement).append(this.contentInner)
     }
-    $popupContent.find(this.popinner).append(this.closeLink)
+    $popupContent.find(this.$popinner).append(this.closeLink)
   }
-  openPopupGallery () {
+  openPopup () {
     this.$html.on('click', this.$openPopup, (e) => {
       // cal lazy img into popup
       const ele = e.currentTarget
@@ -123,9 +129,10 @@ export default class Popup {
       const tmpContent = $(ele).data('id')
       const tmpPopup = $(ele).data('popup')
       const tmpWidthContent = $(tmpContent).data('content')
-      $(ele).addClass('is-click')
+      // console.log('openPopup click')
+      $(ele).addClass(this.isClick)
       this.loadLazyOnLoad()
-      if ($(tmpContent).hasClass('mod-popup-static')) {
+      if ($(tmpContent).hasClass(this.modPopupStatic)) {
         $(tmpContent).addClass(this.popupstatic)
       } else {
         if (typeof tmpWidthContent !== 'undefined') {
@@ -143,7 +150,7 @@ export default class Popup {
       } else {
         $(this.$modPop).addClass(this.popShow)
       }
-      this.$html.addClass(htmlClass).addClass('popup-open')
+      this.$html.addClass(htmlClass).addClass(this.popupOpen)
 
       setTimeout(() => {
         this.$html.addClass('popup-animation')
@@ -153,6 +160,7 @@ export default class Popup {
     })
   }
   closePopup () {
+    // console.log('close')
     const classHtml = this.$html.find('.is-click').data('htmlclass')
     this.$html.removeClass('popup-open popup-animation ' + classHtml)
     if (this.$html.find('.' + this.popShow).hasClass(this.popupstatic)) {
@@ -169,7 +177,7 @@ export default class Popup {
     })
   }
   clickOutSite () {
-    this.$html.on('click', '.mask-pop-overlay', () => {
+    this.$html.on('click', `.${this.maskOverlay}`, () => {
       this.closePopup()
     })
     $(window).keydown((e) => {

@@ -14,7 +14,7 @@ export default class FormAnimation {
     }
   }
   checkValue () {
-    this.$hasFormAni.find(this.formControl).each((_index, el) => {
+    this.$hasFormAni.find(this.formControl).each((index, el) => {
       const eleParent = $(el).parents(this.formGroup)
       if ($(el)[0].value.length) {
         eleParent.addClass(this.activeFocus)

@@ -26,7 +26,17 @@
     transform: translate(-50%, -50%);
   }
 }
-
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  word-wrap: normal !important;
+}
 .text-inherit-child {
   h1,
   h2,
@@ -53,18 +63,4 @@
     @apply mb-0;
   }
 }
-.visually-hidden {
-  @apply hidden;
-}
-main {
-  padding-top: 124px;
-}
-.product__media.global-media-settings {
-  padding-top: 0 !important;
-}
-@screen xl {
-  .col-lg-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
+

@@ -1,17 +1,24 @@
-const ConvertHeight = (($) => {
-  $.fn.convertHeight = function () {
-    let element = $(this)
-    $(element).height('auto')
-    let h1 = 0
-    let itemss = $(element)
-    itemss.each(function () {
-      if (h1 < $(this).height()) {
-        h1 = $(this).height()
+export default class ConvertHeight {
+  constructor () {
+    this.html = $('html')
+  }
+
+  convertHeight () {
+    let tmp = 0
+    return this.each((index, el) => {
+      const element = el
+      $(element).height('auto')
+      const $itemss = $(element)
+      const innerHeights = $itemss.map((i, ele) => {
+        return $(ele).height()
+      })
+      const maxHeight = Math.max(...innerHeights)
+      if (maxHeight > tmp) {
+        tmp = maxHeight
       }
-    })
-    itemss.each(function () {
-      $(this).height(h1)
+      element.height(tmp)
     })
   }
-})($)
-export default ConvertHeight
+}
+
+$.fn.convertHeight = new ConvertHeight().convertHeight()

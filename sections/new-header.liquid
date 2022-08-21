@@ -1,38 +1,72 @@
-<header role="banner" class="site-header">
-  <div class="header-bottom">
-    <div class="header-inn">
-
-      <div class="header-logo">
-        <a href="{{ routes.root_url }}">
+<header id="header" class="module header fixed z-50 w-full bg-gray-50 py-10 lg:py-0" data-module="header">
+  <a
+    class="skip-link text-center opacity-0 absolute hidden mx-auto w-full bg-black text-white"
+    href="javascript:;"
+    ><span>Skip to content</span></a
+  >
+  <nav class="container navbar navbar-expand-lg lg:flex mx-auto items-center justify-between">
+    <div
+      class="header-mobile row items-center justify-between flex-wrap"
+    >
+      <div class="col col-9 col-lg-12">
+        <a
+          id="header-logo"
+          class="navbar-brand header-logo w-full"
+          href="{{ routes.root_url }}"
+        >
          {%- if section.settings.logo != blank -%}
-        {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
-         {{ section.settings.logo | image_url: width: 180 | image_tag:
-              class: 'header__heading-logo',
-              widths: '50, 100, 150, 200, 250, 300, 400, 500',
-              width: 118,
-              alt: logo_alt
+          {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+          {{ section.settings.logo | image_url: width: 180 | image_tag:
+                class: 'header__heading-logo',
+                widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                width: 118,
+                alt: logo_alt
             }}
+          {%- else -%}
+            <img src="//cdn.agilitycms.com/9th-wonder/Attachments/9thwonder%20assets/logo-R-home.svg" alt="TailWind">
           {%- endif -%}
         </a>
       </div>
-      <nav role="navigation" class="head-aside">
-        <ul id="primary-menu" class="head-menu">
-        {%- for link in section.settings.menu.links -%}
+      <div class="col col-3 text-right lg:hidden">
+        <button
+          class="border-0 hamburger-menu"
+          type="button"
+          data-toggle="collapse"
+          data-target="#main-menu"
+          aria-controls="main-menu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icomoon icon-close hidden"></span>
+          <span class="sr-only">Open Menu</span>
+        </button>
+      </div>
+    </div>
+    <div class="navbar-collapse main-menu" id="main-menu" data-module="menu">
+      <ul class="main-menu-ul navbar-nav ml-auto lg:flex list-none pl-0 mb-0 pt-10 lg:pt-0">
+      {%- for link in section.settings.menu.links -%}
           <li
-            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children {% if link.current %} current-menu-ancestor {% endif %} {% if link.child_active %} current-menu-ancestor {% endif %}">
+            class="menu-item has-sub px-5 relative lg:static xl:px-10 pb-7 group mb-0 lg:py-15 {% if link.current %} current-menu-ancestor active {% endif %} {% if link.child_active %} current-menu-ancestor active {% endif %}">
             <a href="{{ link.url }}">{{ link.title }}</a>
             {%- if link.links != blank -%}
-            <ul class="sub-menu">
+             <div class="nav-item-arrows inline-block arrows-lv1 absolute right-5 top-3 lg:hidden cursor-pointer">
+            <i class="icomoon icon-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="dropdown-menu rounded-0 border-0 lg:absolute hidden top-full lg:bg-gray-200 p-8 lg:group-hover:block">
+            <ul class="list-inline list-none pl-0">
             {%- for childlink in link.links -%}
             <li
-                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children {% if childlink.current %} current-menu-item{% endif %} {% if childlink.child_active %} current-menu-ancestor {% endif %}">
+                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children {% if childlink.current %} current-menu-item active {% endif %} {% if childlink.child_active %} current-menu-ancestor active {% endif %}">
                 <a href="{{ childlink.url }}">{{ childlink.title }}
                 </a>
                 {%- if childlink.links != blank -%}
                 <ul class="sub-menu">
                   {%- for childlinkLV2 in childlink.links -%}
                   <li
-                    class="menu-item menu-item-type-post_type menu-item-object-product {% if childlinkLV2.current %} current-menu-item{% endif %}"><a
+                    class="menu-item menu-item-type-post_type menu-item-object-product {% if childlinkLV2.current %} current-menu-item active {% endif %}"><a
                       href="{{ childlinkLV2.url }}">{{ childlinkLV2.title }}</a>
                   </li>
                   {%- endfor -%}
@@ -41,48 +75,15 @@
               </li>
             {%- endfor -%}
             </ul>
+            </div>
              {%- endif -%}
           </li>
           {%- endfor -%}
-        </ul>
-        <div class="cart-box">
-          <a class="a_active" href="{{ routes.cart_url }}">
-            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21">
-              <defs>
-                <style>
-                  .a {
-                    fill: none;
-                    stroke: #373736;
-                    stroke-linecap: round;
-                    stroke-linejoin: round;
-                  }
-                </style>
-              </defs>
-              <g transform="translate(0.5 0.5)">
-                <path class="a" d="M6,2,3,6V20a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V6L18,2Z" transform="translate(-3 -2)">
-                </path>
-                <line class="a" x2="18" transform="translate(0 4)"></line>
-                <path class="a" d="M16,10a4,4,0,0,1-8,0" transform="translate(-3 -2)"></path>
-              </g>
-            </svg>
-          </a>
-          <span class="count-in-cart">0</span>
-
-          <div class="widget_shopping_cart_content">
-
-            <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
-
-
-          </div>
-
-        </div>
-
-        <div class="menu-ico"></div>
-
-      </nav>
+      </ul>
     </div>
-  </div>
+  </nav>
 </header>
+
 
 {% schema %}
 {

@@ -206,44 +206,6 @@
           "enable_sticky_header": true
         }
       },
-      "latest": {
-        "type": "latest",
-        "blocks": {
-          "72d299c6-24c3-4529-8016-e6e29362eb6b": {
-            "type": "item",
-            "settings": {
-              "bgimage": "shopify:\/\/shop_images\/Lifestyle_Images_2_0_E-scaled.jpg",
-              "image": "shopify:\/\/shop_images\/Quest_2.0.png",
-              "link": "#"
-            }
-          },
-          "b81309d0-9de7-4bf8-86b0-1baaad0911cb": {
-            "type": "item",
-            "settings": {
-              "bgimage": "shopify:\/\/shop_images\/Quest_4_0-copy-e1645199457417-scaled.jpg",
-              "image": "shopify:\/\/shop_images\/Marie-Solis-Quest_4.0-copy.png",
-              "link": "#"
-            }
-          },
-          "c8f0e304-9c83-46d5-82fe-5e977a073041": {
-            "type": "item",
-            "settings": {
-              "bgimage": "shopify:\/\/shop_images\/self-serve-coffee-shop.jpg",
-              "image": "shopify:\/\/shop_images\/Marie-Solis-Quest_4.0-copy.png",
-              "link": "#"
-            }
-          }
-        },
-        "block_order": [
-          "72d299c6-24c3-4529-8016-e6e29362eb6b",
-          "b81309d0-9de7-4bf8-86b0-1baaad0911cb",
-          "c8f0e304-9c83-46d5-82fe-5e977a073041"
-        ],
-        "settings": {
-          "padding_top": 36,
-          "padding_bottom": 36
-        }
-      },
       "new-footer": {
         "type": "new-footer",
         "blocks": {

@@ -1,59 +1,21 @@
 @layer base {
-  .btn, 
-  .button {
-    margin-bottom: 12px;
-    margin-right: 12px;
-    display: inline-block;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-    border-radius: 0.125rem;
-    border-width: 2px;
-    border-style: solid;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    vertical-align: middle;
-    font-weight: 700;
-    text-transform: uppercase;
-    -webkit-text-decoration-line: none;
-            text-decoration-line: none;
-      transition: 0.25s all;
+  .btn {
+    @apply px-11 font-bold inline-block select-none align-middle rounded-sm uppercase py-7 border-2 no-underline mb-6 mr-6;
+    transition: .25s all;
   }
-  .btn-outline-primary, 
-  .button--primary {
-    border-color: #373736;
-    background-color: #373736;
-    color: #EAF0F7;
+
+  .btn-outline-primary {
+    @apply text-primary-100 border-primary-100 hover:text-white hover:bg-primary-100;
   }
-  .btn-outline-primary:hover, 
-  .button--primary:hover {
-    background-color: transparent;
-    color: #373736;
+  .btn-primary {
+    @apply text-white bg-primary-100 border-primary-100 hover:bg-primary-200 hover:border-primary-200 hover:text-white;
   }
-  .button--secondary {
-    border-color: #373736;
-    background-color: transparent;
-    color: #373736;
+
+  .btn-outline-light {
+    @apply text-white border-white hover:bg-white hover:text-primary-100;
   }
-  .button--secondary:hover {
-    background-color: #373736;
-    color: #EAF0F7;
+  .btn-light {
+    @apply text-primary-100 border-white bg-white hover:bg-transparent hover:text-white;
   }
-  .btn_explore {
-      width: 156px;
-      height: 52px;
-      border: 1px solid #fff;
-      letter-spacing: 1.6px;
-      color: #fff;
-      margin: 0 auto;
-      transition: all 0.3s;
-      padding: 14px;
-    }
-  .btn_explore:hover {
-      background-color: #fff;
-      color: #000;
-    }
 }
 

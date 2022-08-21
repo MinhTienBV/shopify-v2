@@ -1,26 +1,25 @@
-import './ConvertHeight'
-// import 'jquery-match-height'
-const FixHeight = (() => {
-  let _this = $('.mod-equaheight')
-  let _items = $('.equaheight-item')
-  // let _itemsV2 = $('.equaheight-item-v2')
-  if (_this.length) {
-    const EquaHeight = () => {
-      _this.each((index, el) => {
-        $(el).find(_items).convertHeight()
-        // $(el).find(_itemsV2).matchHeight({
-        //   byRow: true,
-        //   property: 'height',
-        //   target: null,
-        //   remove: false
-        // })
+import 'jquery-match-height'
+export default class FixHeight {
+  constructor () {
+    this.$fixHeight = $('.fix-height')
+  }
+  callFixHeight () {
+    if (this.$fixHeight.length) {
+      const $items = this.$fixHeight.find('.height-item').css('height', '')
+      const $items2 = this.$fixHeight.find('.item-3column h3:first-child').css('height', '')
+      $items.matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+      })
+      $items2.matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
       })
     }
-
-    EquaHeight()
-    $(window).resize(() => {
-      EquaHeight()
-    })
   }
-})()
-export default FixHeight
+}
+new FixHeight().callFixHeight()

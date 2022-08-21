@@ -50,7 +50,7 @@ export default class LazyLoadImage {
     nextActive.removeClass('lazy').addClass('b-loaded')
   }
   lazyloadimageCustom () {
-    $(this.lazyimage).each((_index, element) => {
+    $(this.lazyimage).each((index, element) => {
       const elementScroll = $(element).offset().top - window.innerHeight - (window.innerHeight / 3.5)
       const scrollBody = $(window).scrollTop()
       // console.log(element, elementScroll, scrollBody)
@@ -76,7 +76,7 @@ export default class LazyLoadImage {
     let imgLength = 0
     if ($imgLazy.length) {
       $('body').prepend(`<div class="hidden mess-print text-red">Images aren't loaded entirely yet. Please cancel this print and try again.</div>`)
-      $imgLazy.each((_index, element) => {
+      $imgLazy.each((index, element) => {
         $(element).attr('src', $(element).attr('data-src'))
         $(element).addClass('b-loaded').removeClass('lazy').removeClass('lazy-trigger').removeAttr('data-src')
         element.onload = () => {

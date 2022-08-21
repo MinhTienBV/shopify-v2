@@ -49,7 +49,7 @@ export default class SelectC8 {
     const eleParent = $(element).parent()
     eleParent.find('.dropdown').remove()
     eleParent.after()
-      .append(`<div class='dropdown shadow-none z-10 rounded-0 border-0 no-bg h-auto p-0 relative  ${this.dropdownSelectC8}'>
+      .append(`<div class='dropdown shadow-none z-2 rounded-0 border-0 no-bg h-auto p-0 relative  ${this.dropdownSelectC8}'>
           <a class='dropdown-toggle form-control shadow-none no-underline relative border-1 border-solid border-primary-100 w-full font-bold px-10 py-5 flex items-center text-decoration box-shadow' href='javascript:;' role='combobox' data-toggle='dropdown'aria-haspopup='listbox' aria-expanded="false" role="combobox" aria-controls="${idSelect}" aria-labelledby="${ariaLabel}" ${this.ariaActivedescendant}>
           <span class="filter-option d-block text-truncate overflow-hidden text-ellipsis whitespace-nowrap font-bold pr-10 leading-none text-lg">${textTitle}</span>${this.arrow}</a>
           <div class='dropdown-menu dropdown-menu-c8 absolute top-full left-0 right-0 hidden border-1 border-t-0 bg-white text-reset w-full rounded-0 p-0 m-0 border-solid border-primary-100'>
@@ -114,11 +114,13 @@ export default class SelectC8 {
       const eleParent = $(ele).parent()
       const eleParents = eleParent.find(this.dropdownMenu)
       if (eleParent.hasClass(this.show)) {
+        $dropdownRemove.removeClass(this.show)
         eleParent.removeClass(this.show)
         eleParents.addClass(this.hidden)
         $(ele).attr(this.ariaExpanded, false)
       } else {
         $dropdownRemove.removeClass(this.show)
+        $(this.dropdownMenu).addClass(this.hidden)
         eleParent.addClass(this.show)
         eleParents.removeClass(this.hidden)
         $(ele).attr(this.ariaExpanded, true)

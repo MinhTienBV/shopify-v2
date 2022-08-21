@@ -1,5 +1,6 @@
 .mod-banner-internal {
-  p {
-    @apply mb-10;
+  h1,
+  .h1 {
+    @apply uppercase;
   }
 }

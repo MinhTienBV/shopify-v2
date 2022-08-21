@@ -110,11 +110,15 @@ html {
   margin: 0 auto;
   padding: 0;
 
+  .embed-responsive {
+    padding-bottom: 56%;
+  }
+
   .embed-responsive-item {
-    background-repeat: no-repeat;
-    background-position: center;
     // background-image: url('../images/ajax-loader.svg');
     background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 50%;
   }
 }
 
