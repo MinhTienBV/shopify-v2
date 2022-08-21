@@ -1,33 +1,47 @@
 {
   "sections": {
-    "rich_text": {
-      "type": "rich-text",
+    "1661069017a154942b": {
+      "type": "image-banner",
       "blocks": {
-        "heading": {
+        "16610690177103e883-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
+            "heading": "Image banner",
             "heading_size": "h1"
           }
         },
-        "text": {
+        "16610690177103e883-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "16610690177103e883-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "16610690177103e883-0",
+        "16610690177103e883-1",
+        "16610690177103e883-2"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "image_overlay_opacity": 0,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "1661069005d4b9914b": {
@@ -47,10 +61,108 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "1661085555f8733356": {
+      "type": "multicolumn",
+      "blocks": {
+        "1661085555d7342812-0": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1661085555d7342812-1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1661085555d7342812-2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1661085555d7342812-0",
+        "1661085555d7342812-1",
+        "1661085555d7342812-2"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "166108556134450bad": {
+      "type": "image-with-text",
+      "blocks": {
+        "16610855611761ebcd-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "16610855611761ebcd-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "16610855611761ebcd-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16610855611761ebcd-0",
+        "16610855611761ebcd-1",
+        "16610855611761ebcd-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/camera-looks-down-on-wooden-table-with-two-bao-buns.jpg",
+        "layout": "flex-col",
+        "desktop_content_position": "items-center",
+        "desktop_content_alignment": "lg:text-left",
+        "mobile_content_alignment": "text-left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1661085580208b3be8": {
+      "type": "universal",
+      "settings": {
+      }
     }
   },
   "order": [
-    "rich_text",
-    "1661069005d4b9914b"
+    "1661069017a154942b",
+    "1661069005d4b9914b",
+    "1661085555f8733356",
+    "166108556134450bad",
+    "1661085580208b3be8"
   ]
 }
