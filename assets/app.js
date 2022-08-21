@@ -733,7 +733,7 @@ var LazyLoadImage = /*#__PURE__*/function () {
     value: function lazyLoadImage() {
       var _this2 = this;
 
-      if ($(this.lazyimage).length) {
+      if ($(this.lazyimage).length > 0) {
         this.hasSlider();
         this.lazyloadimageCustom();
         $(window).on('scroll', function () {

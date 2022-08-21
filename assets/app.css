@@ -695,11 +695,17 @@ ul {
 .left-12 {
   left: 24px;
 }
-.z-50 {
-  z-index: 50;
-}
 .z-1 {
   z-index: 1;
+}
+.-z-1 {
+  z-index: -1;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-50 {
+  z-index: 50;
 }
 .m-0 {
   margin: 0px;
@@ -710,6 +716,12 @@ ul {
 }
 .mb-0 {
   margin-bottom: 0px;
+}
+.mb-10 {
+  margin-bottom: 20px;
+}
+.mb-20 {
+  margin-bottom: 40px;
 }
 .mt-3 {
   margin-top: 6px;
@@ -722,12 +734,6 @@ ul {
 }
 .mb-7 {
   margin-bottom: 14px;
-}
-.mb-10 {
-  margin-bottom: 20px;
-}
-.mb-20 {
-  margin-bottom: 40px;
 }
 .block {
   display: block;
@@ -816,11 +822,17 @@ ul {
 .h-full {
   height: 100%;
 }
-.w-1\/2 {
-  width: 50%;
+.min-h-banner {
+  min-height: 456px;
 }
 .w-full {
   width: 100%;
+}
+.w-1\/2 {
+  width: 50%;
+}
+.max-w-4xl {
+  max-width: 56rem;
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -831,8 +843,20 @@ ul {
 .list-none {
   list-style-type: none;
 }
+.flex-col {
+  flex-direction: column;
+}
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
 .flex-wrap {
   flex-wrap: wrap;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
 }
 .items-center {
   align-items: center;
@@ -859,6 +883,10 @@ ul {
   --tw-bg-opacity: 1;
   background-color: rgb(87 101 65 / var(--tw-bg-opacity));
 }
+.bg-blue-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 79 145 / var(--tw-bg-opacity));
+}
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -870,6 +898,9 @@ ul {
 .bg-primary-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(185 74 2 / var(--tw-bg-opacity));
+}
+.bg-cover {
+  background-size: cover;
 }
 .bg-center {
   background-position: center;
@@ -886,15 +917,21 @@ ul {
 .bg-right-top {
   background-position: right top;
 }
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+.p-6 {
+  padding: 12px;
+}
 .p-8 {
   padding: 16px;
 }
 .p-10 {
   padding: 20px;
 }
-.px-10 {
-  padding-left: 20px;
-  padding-right: 20px;
+.py-20 {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .px-4 {
   padding-left: 8px;
@@ -929,6 +966,13 @@ ul {
 .text-right {
   text-align: right;
 }
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+.font-normal {
+  font-weight: 400;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -937,6 +981,9 @@ ul {
 }
 .italic {
   font-style: italic;
+}
+.leading-3 {
+  line-height: .75rem;
 }
 .text-white {
   color: #fff;
@@ -948,8 +995,38 @@ ul {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
+.opacity-10 {
+  opacity: 0.1;
+}
+.opacity-20 {
+  opacity: 0.2;
+}
 .opacity-0 {
   opacity: 0;
+}
+.opacity-30 {
+  opacity: 0.3;
+}
+.opacity-40 {
+  opacity: 0.4;
+}
+.opacity-50 {
+  opacity: 0.5;
+}
+.opacity-60 {
+  opacity: 0.6;
+}
+.opacity-70 {
+  opacity: 0.7;
+}
+.opacity-80 {
+  opacity: 0.8;
+}
+.opacity-90 {
+  opacity: 0.9;
+}
+.opacity-100 {
+  opacity: 1;
 }
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -1902,6 +1979,22 @@ img.lazy:not(.b-loaded) {
   .md\:w-1\/2 {
     width: 50%;
   }
+
+  .md\:max-w-3xl {
+    max-width: 48rem;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-right {
+    text-align: right;
+  }
+
+  .md\:leading-4 {
+    line-height: 1rem;
+  }
 }
 @media (min-width: 992px) {
 
@@ -1911,6 +2004,10 @@ img.lazy:not(.b-loaded) {
 
   .lg\:absolute {
     position: absolute;
+  }
+
+  .lg\:block {
+    display: block;
   }
 
   .lg\:flex {
@@ -1941,14 +2038,13 @@ img.lazy:not(.b-loaded) {
     width: 20%;
   }
 
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
   .lg\:bg-gray-200 {
     --tw-bg-opacity: 1;
     background-color: rgb(247 241 231 / var(--tw-bg-opacity));
-  }
-
-  .lg\:px-20 {
-    padding-left: 40px;
-    padding-right: 40px;
   }
 
   .lg\:py-0 {
@@ -1963,6 +2059,22 @@ img.lazy:not(.b-loaded) {
 
   .lg\:pt-0 {
     padding-top: 0px;
+  }
+
+  .lg\:text-left {
+    text-align: left;
+  }
+
+  .lg\:text-center {
+    text-align: center;
+  }
+
+  .lg\:text-right {
+    text-align: right;
+  }
+
+  .lg\:font-semibold {
+    font-weight: 600;
   }
 
   .group:hover .lg\:group-hover\:block {

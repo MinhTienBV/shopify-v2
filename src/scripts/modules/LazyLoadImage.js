@@ -14,7 +14,7 @@ export default class LazyLoadImage {
     })
   }
   lazyLoadImage () {
-    if ($(this.lazyimage).length) {
+    if ($(this.lazyimage).length > 0) {
       this.hasSlider()
       this.lazyloadimageCustom()
       $(window).on('scroll', () => {
