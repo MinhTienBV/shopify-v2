@@ -497,19 +497,18 @@ var FixHeight = /*#__PURE__*/function () {
     value: function callFixHeight() {
       if (this.$fixHeight.length) {
         var $items = this.$fixHeight.find('.height-item').css('height', '');
-        var $items2 = this.$fixHeight.find('.item-3column h3:first-child').css('height', '');
-        $items.matchHeight({
-          byRow: true,
-          property: 'height',
-          target: null,
-          remove: false
-        });
-        $items2.matchHeight({
-          byRow: true,
-          property: 'height',
-          target: null,
-          remove: false
-        });
+        var $items2 = this.$fixHeight.find('.item-3column h3:first-child').css('height', ''); // $items.matchHeight({
+        //   byRow: true,
+        //   property: 'height',
+        //   target: null,
+        //   remove: false
+        // })
+        // $items2.matchHeight({
+        //   byRow: true,
+        //   property: 'height',
+        //   target: null,
+        //   remove: false
+        // })
       }
     }
   }]);
