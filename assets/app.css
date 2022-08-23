@@ -1236,6 +1236,34 @@ body.has-animation .set-animation .anima-opacity {
   display: flex !important;
   align-items: center;
 }
+.tmenu_item_has_child.style-1 .tmenu_item_layout_icon a {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(185 74 2 / var(--tw-border-opacity)) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(185 74 2 / var(--tw-bg-opacity)) !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  color: #fff !important;
+}
+.tmenu_item_has_child.style-1 .tmenu_item_layout_icon a:hover {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(163 49 0 / var(--tw-border-opacity)) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(163 49 0 / var(--tw-bg-opacity)) !important;
+  color: #fff !important;
+}
+.tmenu_item_has_child.style-1 .tmenu_item_layout_icon a {
+  margin-top: 30px;
+  margin-left: 24px;
+  display: inline-block;
+  width: auto;
+  border-radius: 0.125rem;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+.tmenu_item_has_child.style-1 .tmenu_item_layout_icon a .tmenu_item_icon {
+  display: none !important;
+}
 
 .form-control {
   display: block;

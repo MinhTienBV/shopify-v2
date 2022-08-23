@@ -67,8 +67,17 @@
 .tmenu_item_link{
   padding: 20px;
 }
-.tmenu_item_has_child.style-1 .tmenu_submenu_mega_position_leftparent {
-  left: -150px !important;
-  display: flex !important;
-  align-items: center;
+.tmenu_item_has_child.style-1 {
+  .tmenu_submenu_mega_position_leftparent {
+    left: -150px !important;
+    display: flex !important;
+    align-items: center;
+  }
+  .tmenu_item_layout_icon a {
+    @apply text-white bg-primary-100 border-primary-100 hover:bg-primary-200 hover:border-primary-200 hover:text-white py-7 #{!important};
+    @apply mt-15 ml-12 rounded-sm w-auto inline-block px-11;
+    .tmenu_item_icon {
+      display: none !important;
+    }
+  }
 }
