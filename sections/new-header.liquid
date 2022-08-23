@@ -34,7 +34,7 @@
         <ul class="main-menu-ul navbar-nav ml-auto lg:flex list-none pl-0 mb-0 pt-10 lg:pt-0">
           {%- for link in section.settings.menu_top.links -%}
           <li
-            class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 lg:py-10 {% if link.current %} current-menu-ancestor active {% endif %} {% if link.child_active %} current-menu-ancestor active {% endif %}">
+            class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 xl:py-10 {% if link.current %} current-menu-ancestor active {% endif %} {% if link.child_active %} current-menu-ancestor active {% endif %}">
             <a href="{{ link.url }}">{{ link.title }}</a>
             {%- if link.links != blank -%}
             <div
@@ -70,16 +70,16 @@
       </div>
       <div class="wrap-cart lg:w-1/2">
         <ul class="main-menu-ul navbar-nav ml-auto lg:flex list-none pl-0 mb-0 pt-10 lg:pt-0 lg:justify-end">
-          <li class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 lg:py-10  ">
+          <li class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 xl:py-10  ">
             <a href="#"><span class="icomoon icon-icon-map mr-4"></span> Stores</a>
           </li>
-          <li class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 lg:py-10  ">
+          <li class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 xl:py-10  ">
             <a href="#"><span class="icomoon icon-icon-search  mr-4"></span> Search</a>
           </li>
-          <li class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 lg:py-10  ">
+          <li class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 xl:py-10  ">
             <a href="#"><span class="icomoon icon-user  mr-4"></span> My account</a>
           </li>
-          <li class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 lg:py-10  ">
+          <li class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 xl:py-10  ">
             <a href="#"><span class="icomoon icon-cart  mr-4"></span> Cart</a>
           </li>
         </ul>
@@ -88,7 +88,7 @@
         <ul class="main-menu-ul navbar-nav ml-auto lg:flex list-none pl-0 mb-0 pt-10 lg:pt-0">
           {%- for link in section.settings.menu.links -%}
           <li
-            class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 lg:py-10 {% if link.current %} current-menu-ancestor active {% endif %} {% if link.child_active %} current-menu-ancestor active {% endif %}">
+            class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 xl:py-10 {% if link.current %} current-menu-ancestor active {% endif %} {% if link.child_active %} current-menu-ancestor active {% endif %}">
             <a href="{{ link.url }}">{{ link.title }}</a>
             {%- if link.links != blank -%}
             <div
@@ -126,7 +126,7 @@
         <ul class="main-menu-ul navbar-nav ml-auto lg:flex list-none pl-0 mb-0 pt-10 lg:pt-0 lg:justify-end">
           {%- for link in section.settings.menu_right.links -%}
           <li
-            class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 lg:py-10 {% if link.current %} current-menu-ancestor active {% endif %} {% if link.child_active %} current-menu-ancestor active {% endif %}">
+            class="menu-item has-sub px-5 relative xl:px-10 pb-7 group mb-0 xl:py-10 {% if link.current %} current-menu-ancestor active {% endif %} {% if link.child_active %} current-menu-ancestor active {% endif %}">
             <a href="{{ link.url }}">{{ link.title }}</a>
             {%- if link.links != blank -%}
             <div
