@@ -23,6 +23,9 @@
     }
   }
 }
+.wrap-all-menu {
+  flex-grow: 1;
+}
 .main-menu{
   a{
     @apply no-underline;
@@ -38,6 +41,19 @@
   .is-open-child {
     .dropdown-menu {
       @apply block;
+    }
+  }
+}
+@screen xl {
+  .dropdown-menu {
+    transform: translateX(-45%);
+    min-width: 600px;
+    box-shadow: inset 0 0 0 1px #eaeaea,0 5px 20px rgba(0,0,0,.15);
+    .list-inline {
+      @apply flex flex-wrap;
+      li {
+        @apply w-1/2;
+      }
     }
   }
 }
