@@ -46,14 +46,23 @@
 }
 @screen xl {
   .dropdown-menu {
-    transform: translateX(-45%);
+    left: -150px;
     min-width: 600px;
     box-shadow: inset 0 0 0 1px #eaeaea,0 5px 20px rgba(0,0,0,.15);
+    @apply px-20 py-15;
     .list-inline {
       @apply flex flex-wrap;
       li {
-        @apply w-1/2;
+        @apply w-1/2 mb-0;
       }
+      a {
+        @apply px-10 py-6 block;
+      }
+    }
+  }
+  #main-right {
+    .dropdown-menu {
+      @apply left-auto right-0;
     }
   }
 }

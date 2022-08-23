@@ -25,7 +25,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-user:before {
+  content: "\e915";
+}
+.icon-cart:before {
+  content: "\e914";
+}
 .icon-icon-search:before {
   content: "\e905";
 }
@@ -61,6 +66,9 @@
 }
 .icon-menu:before {
   content: "\e920";
+}
+.icon-icon-map:before {
+  content: "\e904";
 }
 .icon-arrow_drop_down:before {
   content: "\e907";
