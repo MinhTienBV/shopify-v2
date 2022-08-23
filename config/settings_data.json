@@ -199,7 +199,9 @@
       "new-header": {
         "type": "new-header",
         "settings": {
+          "menu_top": "menu-top",
           "menu": "main-menu",
+          "menu_right": "menu-right",
           "menu_type_desktop": "dropdown",
           "show_line_separator": true,
           "enable_sticky_header": true
