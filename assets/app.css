@@ -2177,4 +2177,6 @@ img.lazy:not(.b-loaded) {
 }
 .tmenu_item_has_child.style-1 .tmenu_submenu_mega_position_leftparent {
   left: -150px !important;
+    display: flex !important;
+    align-items: center;
 }
