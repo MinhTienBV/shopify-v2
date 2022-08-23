@@ -164,9 +164,21 @@
         --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
       }
+      @font-face {
+        font-family: 'icomoon';
+        font-display: swap;
+        src:  url('{{ "icomoon.eot" | asset_url}}');
+        src:  url('{{ "icomoon.eot" | asset_url}}') format('embedded-opentype'),
+          url('{{ "icomoon.ttf" | asset_url}}') format('truetype'),
+          url('{{ "icomoon.woff" | asset_url}}') format('woff'),
+          url('{{ "icomoon.svg" | asset_url}}') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
     {% endstyle %}
 
      {% comment %} {{ 'base.css' | asset_url | stylesheet_tag }} {% endcomment %}
+    
     {{ "app.css" | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
