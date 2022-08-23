@@ -2172,3 +2172,6 @@ img.lazy:not(.b-loaded) {
     padding-right: 20px;
   }
 }
+.tmenu_item_link{
+  padding: 30px;
+}
